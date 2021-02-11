@@ -16,6 +16,8 @@ gem 'webpacker'
 
 # Misc
 gem 'bootsnap', require: false
+gem 'tzinfo'
+gem 'tzinfo-data'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

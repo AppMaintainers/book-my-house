@@ -45,7 +45,13 @@ the `.tool-versions` file.
 
 #### Windows
 
-TODO: add windows instructions
+You need to install the required tools one by one, please try to select the same version we defined in the `.tool-versions` file.
+
+1. Install Ruby with [RubyInstaller](https://rubyinstaller.org/downloads/archives/). (Note: you need a _Ruby+Devkit_ installer)
+2. Install [NodeJs](https://nodejs.org/en/download/releases/)
+3. Install yarn with `npm install -g yarn`
+
+The installers might ask for Administrator privileges, but you won't need it later. Use normal `cmd.exe` to run the commands below.
 
 ### Installing
 
@@ -68,6 +74,11 @@ After installing the [Prerequisites](#prerequisites), you need to
     ```bash
     bin/webpack-dev-server
     ```
+   or
+   ```cmd
+   ruby bin/webpack-dev-server
+   ```
+   on Windows
 
 ## Running the tests
 
