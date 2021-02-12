@@ -2,8 +2,8 @@
 
 At this stage of the interview process, you'll be introduced to a very simple Ruby on Rails application, on which you'll
 have to do a number of exercises. Our goal with this is to examine the various skill sets you have. Let me just point
-that out, that you do NOT need to finish all the exercises in order to succeed. We'd rather like to learn the way you
-think, solve problems and your general knowledge on the topic by watching you work, than to just discuss the sheer
+out that you do NOT have to finish all the exercises in order to succeed. We'd rather like to learn the way you
+think, solve problems and your general knowledge on the topic by watching you work, than just discuss the sheer
 number of LoC you wrote.
 
 The application you'll be working with today is practically a "guesthouse management app". You can book for a specific
@@ -84,11 +84,11 @@ After installing the [Prerequisites](#prerequisites), you need to
 
 For automated tests, we are using Rails' defaults
 
-### Break down into end to end tests
+### End to end tests
 
 You can run the test suit with `rails test`
 
-### And coding style tests
+### Coding style checks
 
 We haven't introduced linters yet, but we're planning to adapt Rubocop.
 
