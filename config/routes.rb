@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :bookings, only: %i[index new create]
   resource :query, only: %i[new create]
+  resource :statistic, only: %i[show]
 end
