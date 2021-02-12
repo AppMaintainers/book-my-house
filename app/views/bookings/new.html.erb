@@ -6,9 +6,15 @@
       <p class='error'><%= msg %></p>
     <% end %>
   <% end %>
-  <%= f.label :day, 'Day of booking:' %>
-  <%= f.date_select :day %>
-  <%= f.submit %>
+  <p>
+    <%= f.label :day, 'Day of booking:' %>
+    <%= f.date_select :day %>
+  </p>
+  <p>
+    <%= f.label :house, 'Select a place:' %>
+    <%= f.select :house_id, options_from_collection_for_select(House.ordered, :id, :name), include_blank: true %>
+    <%= f.submit %>
+  </p>
 <% end %>
 
 <p><%= link_to 'Back', bookings_path %></p>

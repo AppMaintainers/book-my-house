@@ -1,7 +1,9 @@
 class Booking < ApplicationRecord
-  scope :ordered, -> { order(:day) }
+  belongs_to :house
 
   validates :day, presence: true, uniqueness: true
+
+  scope :ordered, -> { order(:day) }
 
   def self.booked_for?(date)
     where(day: date).present?
