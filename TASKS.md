@@ -16,6 +16,7 @@ Feel free to choose from the following tasks based on your skills and preference
 * [Routing](#routing)
 * [Validations](#validations)
 * [Statistics](#statistics)
+* [React](#react)
 
 ## Let's begin!
 
@@ -52,3 +53,14 @@ The current statistics page is broken, let's fix the calculations.
 
 1. Find the house with the most bookings
 2. Calculate the most successful year
+
+### React
+
+We've started working on recreating the booking query page with React.
+You can check it on `/query/new?react`. Finish the work by implementing the following:
+
+1. Create a form with 3 input fields: year, month and day
+2. On submission, make a `POST` request to `/api/query`
+3. Display the results in a different component
+4. Make sure to handle request errors
+5. Make sure to disable the submit button while we are fetching the response
