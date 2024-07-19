@@ -40,6 +40,7 @@ class BookingTest < ActionDispatch::IntegrationTest
     booking_params = { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day } }
 
     post '/query', params: booking_params
+
     assert_response :success
     assert_select '#booked-result', 'Yay! You can book the house on the selected day!'
 
