@@ -6,7 +6,7 @@ ruby '2.7.5'
 
 # Core
 gem 'puma'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 6.1.7.8'
 gem 'sqlite3'
 
 # Assets
