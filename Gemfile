@@ -2,11 +2,11 @@
 
 source 'https://rubygems.org'
 
-ruby '2.7.5'
+ruby '3.3.4'
 
 # Core
 gem 'puma'
-gem 'rails', '~> 6.1.0'
+gem 'rails', '~> 6.1.7.8'
 gem 'sqlite3'
 
 # Assets
@@ -23,6 +23,7 @@ gem 'tzinfo-data'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rubocop'
+  gem 'rubocop-capybara'
   gem 'rubocop-minitest'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
