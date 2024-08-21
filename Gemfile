@@ -10,8 +10,6 @@ gem 'rails', '~> 6.1.7.8'
 gem 'sqlite3'
 
 # Assets
-gem 'sass-rails'
-gem 'turbolinks'
 gem 'shakapacker'
 gem 'react-rails'
 

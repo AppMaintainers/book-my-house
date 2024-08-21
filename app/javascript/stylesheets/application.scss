@@ -1,0 +1,30 @@
+h1, h2, p, form, .bookings {
+  text-align: center;
+}
+
+.booking {
+  border: 1px solid;
+  display: inline-block;
+  margin: 1em;
+  padding: 1em;
+  width: fit-content;
+}
+
+#booked-result {
+  margin: 2em;
+  text-align: center;
+}
+
+[type='submit'] {
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.error {
+  color: red;
+}
+
+.field_with_errors {
+  display: inline-block;
+}

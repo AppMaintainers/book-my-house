@@ -70,13 +70,13 @@ After installing the [Prerequisites](#prerequisites), you need to
     ```bash
     rails s
     ```
-4. Optionally you can run webpacker dev server to speed up asset handling
+4. Optionally you can run shakapacker dev server to speed up asset handling
     ```bash
-    bin/webpacker-dev-server
+    bin/shakapacker-dev-server
     ```
    or
    ```cmd
-   ruby bin/webpacker-dev-server
+   ruby bin/shakapacker-dev-server
    ```
    on Windows
 
