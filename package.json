@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "engines": {
-    "nodejs": "22.5.0"
+    "node": "22.5.0"
   },
   "packageManager": "yarn@1.22.22",
   "dependencies": {
