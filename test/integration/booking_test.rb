@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class BookingTest < ActionDispatch::IntegrationTest
@@ -17,7 +19,9 @@ class BookingTest < ActionDispatch::IntegrationTest
   test 'can create a valid booking' do
     house = House.create!(name: 'Summer House', city: 'Tapolca')
     date = Date.today
-    post '/bookings', params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day, house_id: house.id } }
+    post '/bookings',
+         params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day,
+                              house_id: house.id } }
     follow_redirect!
 
     assert_response :success
@@ -29,7 +33,9 @@ class BookingTest < ActionDispatch::IntegrationTest
     date = Date.today
     house = House.create!(name: 'Family House', city: 'Debrecen')
     Booking.create!(day: date, house: house)
-    post '/bookings', params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day, house_id: house.id } }
+    post '/bookings',
+         params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day,
+                              house_id: house.id } }
 
     assert_response :success
     assert_select '.error', 'Day has already been taken'

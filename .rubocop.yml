@@ -7,3 +7,12 @@ require:
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.3
+
+Style/Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
+
+Minitest/MultipleAssertions:
+  Enabled: false

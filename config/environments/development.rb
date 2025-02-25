@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -61,5 +63,5 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Paizacloud needs this to run localhost on their server
-  config.hosts << "localhost-book-my-house.paiza-user-free.cloud"
+  config.hosts << 'localhost-book-my-house.paiza-user-free.cloud'
 end

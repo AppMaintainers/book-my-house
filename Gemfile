@@ -5,18 +5,18 @@ source 'https://rubygems.org'
 ruby '3.3.4'
 gem 'rails', '~> 6.1.7.10'
 
+gem 'bootsnap', require: false
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'puma'
-gem 'sqlite3'
-gem 'shakapacker'
 gem 'react-rails'
-gem 'bootsnap', require: false
+gem 'shakapacker'
+gem 'sqlite3'
 gem 'tzinfo'
 gem 'tzinfo-data'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner-active_record'
 end
 

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class StatisticsController < ApplicationController
   def show
     @most_popular_house = House.first

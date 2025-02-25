@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class QueriesController < ApplicationController
   def new
     @react_enabled = params.key?('react')
