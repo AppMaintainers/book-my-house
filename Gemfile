@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 ruby '3.3.4'
-gem 'rails', '~> 6.1.7.10'
+gem 'rails', '~> 7.2.2.1'
 
 gem 'bootsnap', require: false
 gem 'factory_bot_rails'
