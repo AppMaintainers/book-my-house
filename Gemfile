@@ -3,31 +3,36 @@
 source 'https://rubygems.org'
 
 ruby '3.3.4'
+gem 'rails', '~> 6.1.7.10'
 
-# Core
+gem 'factory_bot_rails'
+gem 'faker'
 gem 'puma'
-gem 'rails', '~> 6.1.7.8'
 gem 'sqlite3'
-
-# Assets
 gem 'shakapacker'
 gem 'react-rails'
-
-# Misc
 gem 'bootsnap', require: false
 gem 'tzinfo'
 gem 'tzinfo-data'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'database_cleaner-active_record'
+end
+
+group :development do
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
   gem 'rubocop'
   gem 'rubocop-capybara'
+  gem 'rubocop-factory_bot'
   gem 'rubocop-minitest'
   gem 'rubocop-performance'
-  gem 'rubocop-rails'
 end
 
 group :test do
   gem 'capybara'
+  gem 'minitest'
+  gem 'minitest-reporters'
   gem 'selenium-webdriver'
 end
