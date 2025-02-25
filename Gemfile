@@ -11,7 +11,7 @@ gem 'faker'
 gem 'puma'
 gem 'react-rails'
 gem 'shakapacker'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.4'
 gem 'tzinfo'
 gem 'tzinfo-data'
 
