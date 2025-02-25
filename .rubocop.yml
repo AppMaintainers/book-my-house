@@ -6,7 +6,9 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 3.4
+  Exclude:
+    - "db/schema.rb"
 
 Style/Documentation:
   Enabled: false
