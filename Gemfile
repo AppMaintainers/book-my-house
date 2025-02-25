@@ -9,7 +9,7 @@ gem 'bootsnap', require: false
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'puma'
-gem 'react-rails'
+gem 'react-rails', '~> 2'
 gem 'shakapacker'
 gem 'sqlite3', '~> 1.4'
 gem 'tzinfo'
