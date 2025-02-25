@@ -1,6 +1,8 @@
 require:
   - rubocop-capybara
   - rubocop-factory_bot
+
+plugins:
   - rubocop-minitest
   - rubocop-performance
 
@@ -9,6 +11,8 @@ AllCops:
   TargetRubyVersion: 3.4
   Exclude:
     - "db/schema.rb"
+    - "vendor/**/*"
+    - "node_modules/**/*"
 
 Style/Documentation:
   Enabled: false

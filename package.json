@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "engines": {
-    "node": "22.5.0"
+    "node": "22.14.0"
   },
   "packageManager": "yarn@1.22.22",
   "babel": {
@@ -39,7 +39,7 @@
     "postcss": "^8.5.3",
     "sass": "^1.85.1",
     "sass-loader": "^16.0.5",
-    "shakapacker": "^8.1.0",
+    "shakapacker": "8.1.0",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.98.0",

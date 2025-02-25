@@ -1,0 +1,33 @@
+name: Test
+on: [push]
+
+jobs:
+  minitest:
+    runs-on: ubuntu-latest
+
+    env:
+      RAILS_ENV: test
+      CI: true
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Bundle Install
+        run: bundle install
+
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.tool-versions'
+          cache: yarn
+
+      - name: Run Shakapacker
+        run: yarn install && bin/shakapacker
+
+      - name: Rails Test
+        run: bundle exec rails test
