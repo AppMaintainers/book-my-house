@@ -14,5 +14,5 @@ House.create(name: 'Flat', city: 'Budapest')
 House.create(name: 'Family house', city: 'Győr')
 
 5.times do |i|
-  Booking.create(day: Date.today + i.days, house: House.all.sample)
+  Booking.create(day: Time.zone.today + i.days, house: House.all.sample)
 end

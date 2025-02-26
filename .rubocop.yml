@@ -5,10 +5,12 @@ require:
 plugins:
   - rubocop-minitest
   - rubocop-performance
+  - rubocop-rails
 
 AllCops:
   NewCops: enable
   TargetRubyVersion: 3.4
+  TargetRailsVersion: 8.0
   Exclude:
     - "db/schema.rb"
     - "vendor/**/*"

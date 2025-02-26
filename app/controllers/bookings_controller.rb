@@ -22,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:day, :house_id)
+    params.expect(booking: %i[day house_id])
   end
 end

@@ -18,7 +18,7 @@ class BookingTest < ActionDispatch::IntegrationTest
 
   test 'can create a valid booking' do
     house = House.create!(name: 'Summer House', city: 'Tapolca')
-    date = Date.today
+    date = Time.zone.today
     post '/bookings',
          params: { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day,
                               house_id: house.id } }
@@ -30,7 +30,7 @@ class BookingTest < ActionDispatch::IntegrationTest
   end
 
   test 'cannot create an invalid booking' do
-    date = Date.today
+    date = Time.zone.today
     house = House.create!(name: 'Family House', city: 'Debrecen')
     Booking.create!(day: date, house: house)
     post '/bookings',
@@ -42,7 +42,7 @@ class BookingTest < ActionDispatch::IntegrationTest
   end
 
   test 'can query a day for booking info' do
-    date = Date.today
+    date = Time.zone.today
     booking_params = { booking: { 'day(1i)' => date.year, 'day(2i)' => date.month, 'day(3i)' => date.day } }
 
     post '/query', params: booking_params

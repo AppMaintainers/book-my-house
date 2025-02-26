@@ -15,7 +15,7 @@ class QueriesController < ApplicationController
   private
 
   def query_date
-    booking_params = params.require(:booking).permit('day(1i)', 'day(2i)', 'day(3i)')
+    booking_params = params.expect(booking: ['day(1i)', 'day(2i)', 'day(3i)'])
 
     year = booking_params['day(1i)'].to_i
     month = booking_params['day(2i)'].to_i
