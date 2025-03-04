@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.all.ordered
@@ -20,6 +22,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:day, :house_id)
+    params.expect(booking: %i[day house_id])
   end
 end

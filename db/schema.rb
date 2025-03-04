@@ -10,21 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_12_111039) do
-
+ActiveRecord::Schema[8.0].define(version: 2025_02_26_121456) do
   create_table "bookings", force: :cascade do |t|
-    t.date "day"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "house_id"
+    t.integer "house_id", null: false
+    t.date "day", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["house_id", "day"], name: "index_bookings_on_house_id_and_day", unique: true
     t.index ["house_id"], name: "index_bookings_on_house_id"
   end
 
   create_table "houses", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.string "city"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_houses_on_name", unique: true
   end
 
   add_foreign_key "bookings", "houses"

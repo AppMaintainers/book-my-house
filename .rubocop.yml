@@ -1,16 +1,38 @@
 require:
   - rubocop-capybara
+  - rubocop-factory_bot
+
+plugins:
   - rubocop-minitest
   - rubocop-performance
   - rubocop-rails
-inherit_from: .rubocop_todo.yml
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.4
+  TargetRailsVersion: 8.0
+  Exclude:
+    - "db/schema.rb"
+    - "vendor/**/*"
+    - "node_modules/**/*"
 
 Style/Documentation:
   Enabled: false
 
-Style/SymbolArray:
-  EnforcedStyle: brackets
+Layout/LineLength:
+  Enabled: false
+
+Minitest/MultipleAssertions:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
