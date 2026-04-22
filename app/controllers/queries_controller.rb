@@ -1,6 +1,6 @@
 class QueriesController < ApplicationController
   def new
-    @react = params[:react].present?
+    @react = params.key?(:react)
   end
 
   def create
