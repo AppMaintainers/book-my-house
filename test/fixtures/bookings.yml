@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house: one
+  day: 2026-04-22
+
+two:
+  house: two
+  day: 2026-04-22
