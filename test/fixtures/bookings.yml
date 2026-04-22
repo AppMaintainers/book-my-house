@@ -1,9 +1,27 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   house: one
-  day: 2026-04-22
+  day: 2025-03-10
 
 two:
   house: two
-  day: 2026-04-22
+  day: 2025-06-15
+
+popular_one:
+  house: popular
+  day: 2025-01-10
+
+popular_two:
+  house: popular
+  day: 2025-03-15
+
+popular_three:
+  house: popular
+  day: 2025-05-20
+
+popular_four:
+  house: popular
+  day: 2025-07-25
+
+popular_five:
+  house: popular
+  day: 2024-06-10

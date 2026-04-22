@@ -1,9 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: MyString
-  city: MyString
+  name: Test House One
+  city: Budapest
 
 two:
-  name: MyString
-  city: MyString
+  name: Test House Two
+  city: Gyor
+
+popular:
+  name: Popular House
+  city: Pecs
