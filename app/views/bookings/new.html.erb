@@ -1,0 +1,28 @@
+<h1>New Booking</h1>
+
+<%= form_with model: @booking do |f| %>
+  <% if @booking.errors.any? %>
+    <article aria-label="Validation errors">
+      <h4>Please fix the following errors:</h4>
+      <ul>
+        <% @booking.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </article>
+  <% end %>
+
+  <label>
+    House
+    <%= f.collection_select :house_id, @houses, :id, :name, prompt: "Select a house" %>
+  </label>
+
+  <label>
+    Day
+    <%= f.date_field :day %>
+  </label>
+
+  <%= f.submit "Create Booking" %>
+<% end %>
+
+<p><%= link_to "Back to bookings", bookings_path %></p>
