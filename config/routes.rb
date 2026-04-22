@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resource :query, only: [ :new, :create ]
   resource :statistics, only: [ :show ]
+  resources :tasks, only: [ :index ]
 
   namespace :api do
     resource :query, only: [ :create ]
