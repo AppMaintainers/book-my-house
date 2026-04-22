@@ -1,0 +1,41 @@
+<h1>Interview Tasks</h1>
+
+<article>
+  <header>Progress: <%= @completed %> / <%= @total %></header>
+  <progress value="<%= @completed %>" max="<%= @total %>"></progress>
+</article>
+
+<p>
+  Run <code>rails test test/tasks/</code> to verify your solutions.
+  See <strong>TASKS.md</strong> for detailed instructions.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Task</th>
+      <th>Difficulty</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task[:number] %></td>
+        <td><%= task[:title] %></td>
+        <td>
+          <% case task[:difficulty] %>
+          <% when "Starter" %>
+            <mark><%= task[:difficulty] %></mark>
+          <% when "Intermediate" %>
+            <mark class="secondary"><%= task[:difficulty] %></mark>
+          <% when "Advanced" %>
+            <mark class="contrast"><%= task[:difficulty] %></mark>
+          <% end %>
+        </td>
+        <td><%= task[:complete] ? "✅" : "⬜" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
