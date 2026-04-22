@@ -1,0 +1,20 @@
+<h1>Availability for <%= @date %></h1>
+
+<% if @bookings.any? %>
+  <article>
+    <header>Booked</header>
+    <p>This date is booked for:</p>
+    <ul>
+      <% @bookings.each do |booking| %>
+        <li><%= booking.house.name %> (<%= booking.house.city %>)</li>
+      <% end %>
+    </ul>
+  </article>
+<% else %>
+  <article>
+    <header>Available!</header>
+    <p>No bookings found for this date.</p>
+  </article>
+<% end %>
+
+<p><%= link_to "Check another date", new_query_path %></p>

@@ -3,5 +3,11 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [ :index, :new, :create ]
 
+  resource :query, only: [ :new, :create ]
+
+  namespace :api do
+    resource :query, only: [ :create ]
+  end
+
   root "bookings#index"
 end
