@@ -78,6 +78,11 @@ Visit [http://localhost:3000](http://localhost:3000) — you should see a list o
 bin/rails test
 ```
 
+## Useful resources
+
+- [Ruby on Rails Guides](https://guides.rubyonrails.org) — official Rails documentation
+- [APIdock](https://apidock.com) — searchable Ruby, Rails, and RSpec API reference
+
 ## Questions?
 
 If you run into setup issues, don't hesitate to reach out. We're happy to help.
