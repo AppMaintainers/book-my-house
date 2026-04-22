@@ -1,0 +1,28 @@
+<h1>Statistics</h1>
+
+<article>
+  <header>Most Popular House</header>
+  <% if @most_popular_house %>
+    <p><strong><%= @most_popular_house.name %></strong> (<%= @most_popular_house.city %>)</p>
+  <% else %>
+    <p>No data available</p>
+  <% end %>
+</article>
+
+<article>
+  <header>Most Successful Year</header>
+  <% if @most_successful_year %>
+    <p><strong><%= @most_successful_year %></strong></p>
+  <% else %>
+    <p>No data available</p>
+  <% end %>
+</article>
+
+<article>
+  <header>Average Bookings per House</header>
+  <% if @average_bookings_per_house %>
+    <p><strong><%= @average_bookings_per_house %></strong></p>
+  <% else %>
+    <p>No data available</p>
+  <% end %>
+</article>

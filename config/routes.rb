@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [ :index, :new, :create ]
 
   resource :query, only: [ :new, :create ]
+  resource :statistics, only: [ :show ]
 
   namespace :api do
     resource :query, only: [ :create ]
