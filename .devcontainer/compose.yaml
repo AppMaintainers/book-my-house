@@ -1,4 +1,4 @@
-name: "book_my_house_v2"
+name: "book_my_house"
 
 services:
   rails-app:
@@ -7,16 +7,16 @@ services:
       dockerfile: .devcontainer/Dockerfile
 
     volumes:
-    - ../../book-my-house-v2:/workspaces/book-my-house-v2:cached
+    - ../../book-my-house:/workspaces/book-my-house:cached
 
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 
+    ports:
+    - "3000:3000"
+
     # Uncomment the next line to use a non-root user for all processes.
     # user: vscode
-
-    # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
     depends_on:
     - selenium
 
